@@ -819,6 +819,7 @@ class Base():
         :return: the matrix that contains the original snapshots.
         :rtype: numpy.ndarray
         '''
+        if type(data) != np.ndarray: data = data.values
         if t_0 is None: t_0 = 0
         if t_end is None: t_end = data.shape[0]
         d = data[t_0:t_end,...]
